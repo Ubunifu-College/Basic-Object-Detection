@@ -62,6 +62,12 @@
   border: royalblue solid 2px;
   color: white;
   }
+
+
+  #webcam{
+    height: 480px;
+    width: 640px;
+  }
   
   
   
@@ -258,4 +264,9 @@
   
   .thePosition{
       position: absolute;
+  }
+
+
+  .runpc{
+    display: none;
   }
