@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Event Management Demo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+  </head>  
+  <body>
+
+    <div class="flexContainer">
+
+      <div class="sideNav">
+
+        <div class="side1">
+
+        </div>
+
+        <div class="side2">
+				
+        </div>
+
+        <p>Recorded Video</p>
+        <div class="side3">
+			<br>
+				
+				<video id="myVideo" width="334" height="190" muted autoplay loop controls>
+				  
+				</video>
+			
+			<p>Logic based on:</p> <p id="aiLogic"></p>
+			
+			
+			
+        </div>
+        
+      </div>
+
+      <div class="rightSide">
+
+        <div class="navBar">
+          <div class="searchContainer">
+            <img src="images/search-black-18dp.svg" alt="">
+          </div>
+          <ul class="menuBar">
+            <a href="" class="menuItem colorBlack"><li>Dashoard</li></a>
+            <a href="" class="menuItem colorGray"><li>Recorded Videos</li></a>
+            <a href="" class="menuItem colorGray"><li>Reports</li></a>
+            <a href="" class="menuItem colorGray"><li>Analytics</li></a>
+            <a href="" class="menuItem colorGray"><li>Account</li></a>
+          </ul>
+
+          <div class="rightMenu">
+            <img src="images/notification2.svg" class="notifications" alt="">
+            <img src="images/logo.png" class="logo" alt="">
+            <img src="images/menu.svg" class="menuLogo" alt="">
+          </div>
+          
+
+        </div>
+
+        <h3 class="liveText">Live Stream Feed</h3>
+
+        <div class="liveContainer">
+
+          <section id="demos" class="invisible">
+
+            <div id="liveView" class="camView">
+              <button  id="webcamButton" >Loading model. Please wait......</button>
+              <video id="webcam" autoplay width="640" height="480"></video>
+            </div>
+          </section>
+
+
+          <div class="liveRight">
+            <p class="liveP1">Video Feed Analysis</p>
+            <div></div>
+			<br>
+			<br>
+			
+			<p id="aiDemo"></p>
+			
+
+          </div>
+
+        </div>
+
+        <div class="bottomDiv">
+        
+          <img src="images/profile.jpg" class="profileImage" alt="">
+          <div class="bootomDiv2">
+            <p><a>Male:</a>  0</p>
+            <p><a>Female:</a>  0</p>
+          </div>
+          <div class="btnContainer">
+            <button class="analytBtn">View Analytics</button>
+        
+          </div>
+         
+         
+
+        </div>
+
+
+       
+
+      </div>
+
+      
+
+    </div>
+  
+
+    
+   
+
+    <!-- Load the ML library - tensorflow js -->
+    <!-- TensorFlow.js is a library for developing and training machine learning models in JavaScript. We are using it to enable machine learning capabilities in the web application. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+
+    <!-- Load the coco-ssd model to use to recognize stuff in images -->
+    <!-- What is a model? A machine learning model is a mathematical representation or algorithm that learns patterns and relationships from data. It is trained on labeled examples to make predictions or perform tasks based on the learned patterns. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <!-- The coco-ssd model is a pre-trained model specifically designed for object detection in images. We are using it to detect items in the video frames captured by the webcam. By loading this model, we can leverage its capabilities to recognize and label objects in real-time. -->
+
+    <script src="js/test.js" defer></script>
+  </body>
+</html>
