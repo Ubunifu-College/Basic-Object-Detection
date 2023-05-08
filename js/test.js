@@ -11,7 +11,7 @@ function getUserMediaSupported() {
 
 setTimeout(function() {
   enableWebcamButton.innerText = "Start the Webcam";
-}, 3000);
+}, 12000);
 
 
 
